@@ -1,5 +1,5 @@
 # MicroBlocks translation file
-# Last updated: July 07 2020
+# Last updated: Dec 12 2020
 
 #########################
 # Blocks and categories #
@@ -22,24 +22,6 @@ Input
 
 button A
 按键 A
-
-timer
-计时器
-
-reset timer
-计时器归零
-
-set block size...
-设置积木大小...
-
-Board not connected
-未连接
-
-Graph
-图表
-
-Graphics
-图形
 
 button B
 按键 B
@@ -123,7 +105,7 @@ comment _
 注释 _
 
 for _ in _ _
-重复执行 变化因子 _ 范围 _ _
+重复执行 循环因子 _ 范围 _ _
 
 repeat until _ _
 重复执行 直到 _ _
@@ -139,6 +121,12 @@ stop all
 
 last message
 最新消息
+
+call _
+调用 _
+
+with _
+以 _
 
 Operators
 运算
@@ -183,7 +171,7 @@ list
 列表
 
 Advanced:
---MISSING--
+高级
 
 hex _
 十六进制 _
@@ -211,7 +199,7 @@ change _ by _
 把 _ 增加 _
 
 initialize local _ to _
---MISSING--
+将本地的 _ 初始化为 _
 
 Data
 数据
@@ -265,7 +253,7 @@ new list length _
 新建长度为 _ 的列表
 
 new byte array _
---MISSING--
+新 byte 数组 _
 
 free memory
 释放内存
@@ -307,6 +295,18 @@ spi 发送 _
 spi receive
 spi 接收
 
+spi setup speed _
+spi 设置速度 _
+
+mode _
+模式 _
+
+rpi channel _
+rpi 信道 _
+
+spi exchange bytes _
+spi 交换字节 _
+
 print _
 打印 _
 
@@ -326,10 +326,10 @@ draw shape _ at x _ y _
 绘制形状 _ 于 x _ y _
 
 shape for letter _
-Form für Buchstabe _
+字母 _ 的形状
 
 send NeoPixel rgb _
-向NeoPixel发送 RGB _
+向 NeoPixel 发送 RGB _
 
 has tone support
 具有音调支持
@@ -338,19 +338,19 @@ play tone pin _ frequency _
 播放音调于引脚 _ 频率 _
 
 has WiFi support
-具有WiFi支持
+具有 WiFi 支持
 
 start WiFi _ password _
 开启 WiFi _ 密码 _
 
 stop WiFi
-停止WiFi
+停止 WiFi
 
 WiFi status
-WiFi状态
+WiFi 状态
 
 my IP address
-我的IP地址
+我的 IP 地址
 
 radio send number _
 广播发送数字 _
@@ -371,25 +371,25 @@ radio last string
 最后广播的字符串
 
 radio last message type
---MISSING--
+最后广播消息类型
 
 radio set group _
 设置广播分组 _
 
 radio set channel (0-83) _
---MISSING--
+设置广播信道 (0-83) _
 
 radio set power (0-7) _
 设置广播信号强度 (0-7) _
 
 radio last signal strength
---MISSING--
+最后广播信号强度
 
 radio receive packet _
---MISSING--
+广播收到包 _
 
 radio send packet _
---MISSING--
+广播发送包 _
 
 disable radio
 禁止广播
@@ -423,22 +423,22 @@ temperature (°C)
 # NeoPixel library
 
 NeoPixel
-NeoPixel
+NeoPixels
 
 set NeoPixels _ _ _ _ _ _ _ _ _ _
-设置 NeoPixel _ _ _ _ _ _ _ _ _ _
+设置 NeoPixels _ _ _ _ _ _ _ _ _ _
 
 clear NeoPixels
-关闭NeoPixel
+关闭 NeoPixels
 
 set NeoPixel _ color _
-设置NeoPixel _ 颜色 _
+设置 NeoPixels _ 颜色 _
 
 set all NeoPixels color _
-设置所有NeoPixel的颜色为 _
+设置所有 NeoPixels 的颜色为 _
 
 rotate NeoPixels by _
-轮转NeoPixel 间距 _
+轮转 NeoPixels 间距 _
 
 color r _ g _ b _ (0-31)
 颜色 R _ G _ B _ (0-31)
@@ -447,7 +447,7 @@ random color
 随机颜色
 
 attach _ LED NeoPixel strip to pin _
-将 _ 个LED的NeoPixel灯带 连接至引脚 _
+将 _ 个 LED 的 NeoPixels 灯带 连接至引脚 _
 
 has white _
 具有白光 _
@@ -486,13 +486,13 @@ counter-clockwise
 逆时针
 
 ED1 Buttons
-ED1按键
+ED1 按键
 
 button OK
-OK按键
+OK 按键
 
 button X
-X按键
+X 按键
 
 button up
 向上键
@@ -531,7 +531,7 @@ Hummingbird _ _
 Hummingbird _ _
 
 Hummingbird Battery (mV)
-Hummingbird电池 (mV)
+Hummingbird 电池 (mV)
 
 Light
 亮度
@@ -567,7 +567,7 @@ Finch Stop
 停止Finch
 
 Finch Distance (cm)
-Finch 距离 (厘米)
+Finch 距离 (cm)
 
 Finch _ Light
 Finch _ 光线
@@ -642,10 +642,10 @@ distance (cm) trigger _ echo _
 # Infrared remote library
 
 IR Remote
-远距IR
+IR 红外遥控
 
 receive IR code
-接收IR编码
+接收 IR 编码
 
 receive IR code from device _
 接收 IR 编码从设备 _
@@ -654,7 +654,7 @@ test IR
 测试 IR
 
 attach IR receiver to pin _
-连接IR接收器至引脚 _
+连接 IR 接收器至引脚 _
 
 ####
 # Radio comm library
@@ -728,22 +728,22 @@ enable TFT _
 启用 TFT
 
 TFT width
-TFT宽度
+TFT 宽度
 
 TFT height
-TFT高度
+TFT 高度
 
 set TFT pixel x _ y _ to _
-设置 TFT-像素 x _ y _ 为 _
+设置 TFT 像素 x _ y _ 为 _
 
 draw line on TFT from x _ y _ to x _ y _ color _
-在TFT上绘制直线从 x _ y _ 至 x _ y _ 颜色 _
+在 TFT 上绘制直线从 x _ y _ 至 x _ y _ 颜色 _
 
 draw rectangle on TFT at x _ y _ width _ height _ color _
-在TFT上绘制长方形,位置 x _ y _ 宽度 _ 高度 _ 颜色 _
+在 TFT 上绘制长方形,位置 x _ y _ 宽度 _ 高度 _ 颜色 _
 
 draw rounded rectangle on TFT at x _ y _ width _ height _ radius _ color _
-在TFT上绘制圆角长方形, 位置 x _ y _ 宽度 _ 高度 _ 半径 _ 颜色 _
+在 TFT 上绘制圆角长方形, 位置 x _ y _ 宽度 _ 高度 _ 半径 _ 颜色 _
 
 draw circle on TFT at x _ y _ radius _ color _
 在TFT上绘制圆形, 位置 x _ y _ 半径 _ 颜色 _
@@ -755,7 +755,7 @@ filled _
 填充 _
 
 write _ on TFT at x _ y _ color _
-在TFT上写 _ 位置 x _ y _ 颜色 _
+在 TFT 上写 _ 位置 x _ y _ 颜色 _
 
 scale _ wrap _
 scale _ wrap _
@@ -777,7 +777,7 @@ play frequency _ for _ ms
 弹奏频率 _ 持续 _ 毫秒
 
 play midi key _ for _ ms
-弹奏midi键 _ 持续 _ 毫秒
+弹奏 midi 键 _ 持续 _ 毫秒
 
 ####
 # Turtle geometry library
@@ -795,7 +795,7 @@ turn _ degrees
 旋转 _ 度
 
 turn _ / _ of circle
-旋转 _ / _ 个圈
+旋转 _ / _ 周
 
 pen down
 落笔
@@ -867,13 +867,13 @@ WiFi
 WiFi
 
 wifi connect to _ password _ try _ times
-连接WiFi至 _ 密码 _ 尝试 _ 次
+连接 WiFi 至 _ 密码 _ 尝试 _ 次
 
 wifi create hotspot _ password _
 创建WiFi热点 _ 密码 _
 
 IP address
-IP地址
+IP 地址
 
 ####
 # Motion library
@@ -952,25 +952,25 @@ set DotStar brightness _
 # BME280 environmental sensor
 
 bme280 connected
-bme280已连接
+bme280 已连接
 
 bmp280 connected
-bmp280已连接
+bmp280 已连接
 
 bmx280 temperature
-bmx280温度
+bmx280 温度
 
 bmx280 pressure
-bmx280压力
+bmx280 压力
 
 bme280 humidity
-bme280湿度
+bme280 湿度
 
 ####
 # TCS34725 color sensor
 
 TCS34725 connected
-TCS34725已连接
+TCS34725 已连接
 
 TCS34725 rgb
 TCS34725 RGB
@@ -1003,43 +1003,43 @@ RFID _ = _
 RFID _ = _
 
 get PN532 firmware version
-PN532固件版本
+PN532 固件版本
 
 ####
 # HTTP libraries
 
 HTTP client
-HTTP客户端
+HTTP 客户端
 
 _ data _ to http܃// _
 _ 数据 _ 至 http// _
 
 HTTP server
-HTTP服务器
+HTTP 服务器
 
 start HTTP server
-启动HTTP服务器
+启动 HTTP 服务器
 
 HTTP server request
-HTTP服务器请求
+HTTP 服务器请求
 
 respond _ to HTTP request
 回应 _ 至HTTP请求
 
 with body _
-with body _
+与主体 _
 
 and headers _
-and headers _
+和头信息 _
 
 body of request _
-body of request _
+请求体 _
 
 path of request _
-path of request _
+请求路径 _
 
 method of request _
-method of request _
+请求方法 _
 
 ####
 # Web Things library
@@ -1048,10 +1048,10 @@ Web Thing
 Web Thing
 
 set thing name to _
-设置Thing的名字为 _
+设置 Thing 的名字为 _
 
 set thing capability to _
-设置thing的能力为 _
+设置 Thing 的能力为 _
 
 set boolean property _ title _ @Type _
 设置逻辑属性 _ 名字 _ @类型 _
@@ -1089,6 +1089,97 @@ event definitions JSON
 events JSON
 事件 JSON
 
+####
+# MiKe Robot library
+
+MiKe front obstacle (cm)
+MiKe 前方障碍物 (cm)
+
+MiKe _ obstacle ?
+MiKe _ 障碍 ?
+
+MiKe black line on _ ?
+MiKe 黑线在 _ ?
+
+MiKe back light
+MiKe 后部灯
+
+MiKe IR
+MiKe IR 红外
+
+MiKe digital D8 sensor
+MiKe 数字 D8 传感器
+
+MiKe stop motors
+MiKe 停止电机
+
+MiKe Robot go _ at _ %
+MiKe Robot 前进 _ 速度 _ %
+
+MiKe Robot speed _ %
+MiKe Robot 速度 _ %
+
+MiKe Robot direction _
+MiKe Robot 面向 _
+
+MiKe turn _ motor _
+MiKe 转向 _ 电机 _
+
+MiKe speed _ motor at _ %
+MiKe 设置 _ 电机 速度 _ %
+
+MiKe front lights off
+MiKe 前灯关闭
+
+MiKe front lights to _
+MiKe 前灯为 _
+
+MiKe circle lights off
+MiKe 环形灯关闭
+
+MiKe circle ligths to _
+MiKe 环形灯为 _
+
+MiKe circle light _ (1-18) to _
+MiKe 环形灯从 _ (1-18) 到 _
+
+MiKe rotate lights by _
+MiKe 循环点亮位移 _
+
+MiKe digital D8 to _
+MiKe 数字 D8 为 _
+
+####
+# DrawBot Library
+# A CoreXY plotter library that supports turtle geometry
+
+plotter move X _ Y _
+plotter 移动到 X _ Y _
+
+plotter move _ steps
+plotter 移动 _ 步
+
+plotter turn _ degrees
+plotter 转 _ 度
+
+plotter turn _ / _ of circle
+plotter 转 _ / _ 周
+
+plotter point in direction _
+plotter 面向 _
+
+plotter pen down
+plotter 落笔
+
+plotter pen up
+plotter 抬笔
+
+plotter stop
+plotter 停止
+
+set plotter speed to _ %
+设置 plotter 速度为 _ %
+
 ##################
 # MicroBlocks UI #
 ##################
@@ -1102,25 +1193,25 @@ Open
 打开
 
 Open from board
---MISSING--
+从主板上打开
 
 Information
---MISSING--
+信息
 
 Plug in the board.
---MISSING--
+连接主板
 
 Reading project from board...
---MISSING--
+从主板读取项目...
 
 Loading project...
---MISSING--
+加载项目
 
 Found a newer version of
---MISSING--
+发现新版本
 
 Do you want me to update the one in the project?
---MISSING--
+你希望在项目中进行升级吗？
 
 Save
 保存
@@ -1147,7 +1238,7 @@ Board type:
 控制板类型:
 
 Select board:
-选择控制板:
+选择主板:
 
 Could not read:
 无法读取:
@@ -1171,25 +1262,25 @@ Script is too large to send to board.
 脚本太大，无法发送至主板.
 
 Use "Connect" button to connect to a MicroBlocks device.
-使用"连接"按钮连接至一个MicroBlocks设备.
+使用"连接"按钮连接至一个 MicroBlocks 设备.
 
 No boards found; is your board plugged in?
 无法找到控制板，您的控制板已经连接好了么?
 
 For AdaFruit boards, double-click reset button and try again.
-如果是AdaFruit控制板，双击reset键并再次尝试.
+如果是 AdaFruit 控制板，双击reset键并再次尝试.
 
 The board is not responding.
 控制板未响应.
 
 Try to Install MicroBlocks on the board?
-将MicroBlocks安装到这块控制板上么?
+将 MicroBlocks 安装到这块控制板上么?
 
 The MicroBlocks in your board is not current
-控制板中的MicroBlocks并非最新版本
+控制板中的 MicroBlocks 并非最新版本
 
 Try to update MicroBlocks on the board?
-将MicroBlocks上传至控制板么?
+将 MicroBlocks 上传至控制板么?
 
 Stop
 停止
@@ -1198,13 +1289,21 @@ Start
 开始
 
 Quit MicroBlocks?
-退出MicroBlocks?
+退出 MicroBlocks?
 
 Discard current project?
 放弃当前项目?
 
+# Scripting area right-click context menu
+
+set block size...
+设置积木块尺寸
+
+make blocks bigger or smaller
+增加或减小积木块
+
 clean up
-清除
+整理
 
 arrange scripts
 排列脚本
@@ -1227,6 +1326,9 @@ save a picture of all scripts
 about...
 关于...
 
+About MicroBlocks
+关于 MicroBlocks
+
 virtual machine version
 虚拟机版本
 
@@ -1243,16 +1345,16 @@ firmware version
 固件版本
 
 start WebThing server
-启动WebThing服务器
+启动 WebThing 服务器
 
 stop WebThing server
-停止WebThing服务器
+停止 WebThing 服务器
 
 HTTP Server
---MISSING--
+HTTP 服务器
 
 MicroBlocks HTTP Server listening on port 6473
-MicroBlocks HTTP服务器正在监听端口 6473
+MicroBlocks HTTP 服务器正在监听端口 6473
 
 disable autoloading board libraries
 禁止自动加载和控制板相关的积木库
@@ -1261,34 +1363,37 @@ enable autoloading board libraries
 允许自动加载和控制板相关的积木库
 
 enable PlugShare when project empty
---MISSING--
+项目为空时允许 PlugShare
 
 disable PlugShare when project empty
---MISSING--
+项目为空时禁止 PlugShare
 
 erase flash and update firmware on ESP board
-擦除信息并重新分区ESP
+擦除 flash 并升级 ESP 固件
 
 Use board type
 使用控制板类信息
+
+Plug in the board.
+板子上的 Plug
 
 Wiping board...
 擦除主板上的信息...
 
 (press ESC to cancel)
-(按下ESC键取消)
+(按下 ESC 键取消)
 
 Done!
 完成!
 
 download and install latest VM
-下载并且安装最新版的虚拟机
+下载并且安装最新版的 VM
 
 Select board type:
 选择主板类型:
 
 Uploading MicroBlocks to board...
-将MicroBlocks上传至主板...
+将 MicroBlocks 上传至主板...
 
 copy data to clipboard
 将数据复制至剪贴板
@@ -1308,8 +1413,32 @@ export functions as library
 hide advanced blocks
 隐藏高级积木
 
+put file on board
+放置文件到主板
+
+get file from board
+从主板获取文件
+
 Data Graph
 数据图表
+
+Graph
+图表
+
+clear graph
+清除图表
+
+zero at bottom
+0 轴在底部
+
+export data to CSV file
+导出数据到 CSV 文件
+
+import data from CSV file
+从 CSV 文件导入数据
+
+copy graph data to clipboard
+拷贝图表数据到剪贴板
 
 show instructions
 显示指令
@@ -1321,7 +1450,7 @@ expand
 扩展
 
 collapse
-collapse
+折叠
 
 rename...
 重命名...
@@ -1374,11 +1503,14 @@ pull out this block
 save picture of script
 保存脚本图片
 
+save picture of script with result
+保存包含执行结果的脚本文件
+
 save a picture of this block definition as a PNG file
-将这块积木的定义保存为一个PNG文件
+将这块积木的定义保存为一个 PNG 文件
 
 save a picture of these blocks as a PNG file
-将这些积木的图片保存为一个PNG文件
+将这些积木的图片保存为一个 PNG 文件
 
 copy script
 复制脚本
@@ -1426,7 +1558,7 @@ Custom...
 定制...
 
 Obsolete
-obsolet
+废弃
 
 OK
 确定
@@ -1506,7 +1638,7 @@ File not found in server.
 无法在服务器上找到该文件.
 
 Server expects HTTPS, and MicroBlocks doesn't currently support it.
-服务器请求HTTPS协议，但MicroBlocks目前还不支持.
+服务器请求需要HTTPS协议，但 MicroBlocks 目前还不支持.
 
 library information
 积木库信息
@@ -1515,7 +1647,7 @@ built-in library
 内置积木库
 
 Dependency path, name or URL?
-依赖的路径,名字或URL?
+依赖的路径,名字或 URL?
 
 Tag name?
 标签名称?
